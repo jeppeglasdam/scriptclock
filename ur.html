@@ -2,11 +2,28 @@
   <head>
     <title>JAVA-Ur</title>
     <meta charset="UTF-8">
-
+    <script>
+function startTime() {
+  var today = new Date();
+  var h = today.getHours();
+  var m = today.getMinutes();
+  var s = today.getSeconds();
+  m = checkTime(m);
+  s = checkTime(s);
+  document.getElementById('txt').innerHTML =
+  h + ":" + m + ":" + s;
+  var t = setTimeout(startTime, 500);
+}
+function checkTime(i) {
+  if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+  return i;
+}
+</script>
   </head>
-  <body>
+  <body onload="startTime()">
     <canvas id="analogt_ur" width="400" height="400" style="border:1px solid #BADA55;">
 </canvas>
     <script src="urscript.js"></script>
+    <div id="txt"></div>
   </body>
 </html>
