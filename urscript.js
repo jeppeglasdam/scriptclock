@@ -21,5 +21,5 @@ class Viser {
 
 }
 
-var sekundviser = new Viser(100, 2, 200, 200);
+var sekundviser = new Viser(250, 2, 200, 200);
 sekundviser.draw(ctx);
