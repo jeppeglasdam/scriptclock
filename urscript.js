@@ -13,13 +13,14 @@ class Viser {
   }
 
   draw(context){
-    console.log("Hej")
+    ctx.beginPath();
+    ctx.lineWidth = this.width;
     context.moveTo(this.center_x, this.center_y);
-    context.lineTo(this.center_x, this.length);
+    context.lineTo(this.center_x, this.center_y - this.length);
     context.stroke();
   }
 
 }
 
 var sekundviser = new Viser(100, 2, 200, 200);
-sekundviser.draw(ctx);
+sekundviser.draw(c.getContext("2d"));
