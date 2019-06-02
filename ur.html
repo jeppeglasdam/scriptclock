@@ -2,8 +2,27 @@
   <head>
     <title>JAVA-Ur</title>
     <meta charset="UTF-8">
+    <script>
+function startTime() {
+  var today = new Date();
+  var h = today.getHours();
+  var m = today.getMinutes();
+  var s = today.getSeconds();
+  m = checkTime(m);
+  s = checkTime(s);
+  document.getElementById('stort-ur').innerHTML =
+  h + ":" + m + ":" + s;
+  var t = setTimeout(startTime, 500);
+  document.getElementById("sek-ur").innerHTML =
+  s;
+}
+function checkTime(i) {
+  if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+  return i;
+}
+</script>
   </head>
-  <body>
+  <body onload="startTime()">
     <h1 style="color:Red">Glasdams ur</h1>
     <canvas id="analogt_ur" width="400" height="400" style="border:1px solid #BADA55;">
 </canvas>
@@ -15,5 +34,10 @@
     <a href="http://jeppe.glasdam.dk.html" target="_blank">
       <h5>Jeppes Hjemmeside</h5>
     </a>
+    <p>live ur</p>
+    <div id="stort-ur"></div>
+    <br>
+    <p>sekund-ur</p>
+    <div id="sek-ur"></div>
   </body>
 </html>
