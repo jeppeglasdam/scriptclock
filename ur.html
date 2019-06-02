@@ -13,8 +13,11 @@ function startTime() {
   document.getElementById('stort-ur').innerHTML =
   h + ":" + m + ":" + s;
   var t = setTimeout(startTime, 500);
-  document.getElementById("sek-ur").innerHTML =
+  document.getElementById("sekund-ur").innerHTML =
   s;
+
+  document.getElementById("sekund-grader").innerHTML =
+  s*6+"°";
 }
 function checkTime(i) {
   if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
@@ -31,6 +34,9 @@ function checkTime(i) {
     <div id="stort-ur"></div>
     <br>
     <p>sekund-ur</p>
-    <div id="sek-ur"></div>
+    <div id="sekund-ur"></div>
+    <br>
+    <p>hvor mange grader sekundviseren skal flytte</p>
+    <div id="sekund-grader"></div>
   </body>
 </html>
