@@ -10,9 +10,11 @@ function startTime() {
   var s = today.getSeconds();
   m = checkTime(m);
   s = checkTime(s);
-  document.getElementById('txt').innerHTML =
+  document.getElementById('stort-ur').innerHTML =
   h + ":" + m + ":" + s;
   var t = setTimeout(startTime, 500);
+  document.getElementById("minut-ur").innerHTML =
+  s;
 }
 function checkTime(i) {
   if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
@@ -25,6 +27,10 @@ function checkTime(i) {
     <canvas id="analogt_ur" width="400" height="400" style="border:1px solid #BADA55;">
 </canvas>
     <script src="urscript.js"></script>
-    <div id="txt"></div>
+    <p>live ur</p>
+    <div id="stort-ur"></div>
+    <br>
+    <p>minut-ur</p>
+    <div id="minut-ur"></div>
   </body>
 </html>
