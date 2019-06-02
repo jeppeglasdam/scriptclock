@@ -4,9 +4,6 @@ ctx.beginPath();
 ctx.arc(200, 200, 200, 0, 2 * Math.PI, );
 ctx.stroke();
 
-var sekundviser = new Viser(100, 2, 200, 200);
-sekundviser.draw(ctx);
-
 class Viser {
   constructor(length, width, center_x, center_y) {
     this.length = length;
@@ -16,9 +13,13 @@ class Viser {
   }
 
   draw(context){
-    context.moveTo(center_x, center_y);
-    context.lineTo(center_x, length);
+    console.log("Hej")
+    context.moveTo(this.center_x, this.center_y);
+    context.lineTo(this.center_x, this.length);
     context.stroke();
   }
 
 }
+
+var sekundviser = new Viser(100, 2, 200, 200);
+sekundviser.draw(ctx);
