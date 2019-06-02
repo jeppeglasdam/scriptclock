@@ -23,4 +23,5 @@ class Viser {
 }
 
 var sekundviser = new Viser(100, 2, 200, 200);
-sekundviser.draw(c.getContext("2d"));
+sekundviser.draw(ctx);
+
