@@ -1,0 +1,2 @@
+# scriptclock
+Analogt ud
