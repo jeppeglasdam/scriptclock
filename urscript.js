@@ -4,7 +4,8 @@ ctx.beginPath();
 ctx.arc(200, 200, 200, 0, 2 * Math.PI, );
 ctx.stroke();
 
-
+var sekundviser = new Viser(100, 2, 200, 200);
+sekundviser.draw(ctx);
 
 class Viser {
   constructor(length, width, center_x, center_y) {
